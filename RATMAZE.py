@@ -34,3 +34,18 @@ def print_maze(maze):
     for row in maze:
         print(" ".join(row))
 
+def find_path(maze):
+    start = (0, 0)
+    end = (len(maze) - 1, len(maze[0]) - 1)
+    visited = set()
+    queue = Queue()
+    queue.put((start, [start]))
+    while not queue.empty():
+        current, path = queue.get()
+        if current == end:
+            return path
+        for neighbor in get_neighbors(maze, current):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.put((neighbor, path + [neighbor]))
+    return None

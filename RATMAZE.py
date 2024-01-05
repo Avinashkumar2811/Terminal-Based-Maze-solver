@@ -61,3 +61,8 @@ def get_neighbors(maze, current):
         if 0 <= new_row < len(maze) and 0 <= new_col < len(maze[0]) and maze[new_row][new_col] != WALL:
             neighbors.append((new_row, new_col))
     return neighbors
+
+def mark_path(maze, path):
+    for row, col in path:
+        if maze[row][col] != START and maze[row][col] != END:
+            maze[row][col] = PATH

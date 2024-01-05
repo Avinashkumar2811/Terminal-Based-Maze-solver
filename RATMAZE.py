@@ -49,3 +49,5 @@ def find_path(maze):
                 visited.add(neighbor)
                 queue.put((neighbor, path + [neighbor]))
     return None
+
+#I WILL DO TODAY ITS MAIN CODE

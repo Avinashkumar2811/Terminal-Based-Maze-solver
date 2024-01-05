@@ -51,3 +51,13 @@ def find_path(maze):
     return None
 
 #I WILL DO TODAY ITS MAIN CODE
+def get_neighbors(maze, current):
+    row, col = current
+    neighbors = []
+    # Check up, down, left, right
+    directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+    for dr, dc in directions:
+        new_row, new_col = row + dr, col + dc
+        if 0 <= new_row < len(maze) and 0 <= new_col < len(maze[0]) and maze[new_row][new_col] != WALL:
+            neighbors.append((new_row, new_col))
+    return neighbors

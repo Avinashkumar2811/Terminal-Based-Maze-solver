@@ -26,6 +26,9 @@ This Python script generates a random maze, allows the user to find a path from 
    - **G (Generate another puzzle):** Generate a new random maze.
    - **E (Exit):** Exit the game.
 
+### SCREENSHOT 
+![image](https://github.com/Avinashkumar2811/Terminal-Based-Maze-solver/assets/130353196/39db7a52-94c2-49a1-ab85-a1696ecaf9b1)
+
 ### Customization
 
 - You can customize maze elements and colors by modifying constants in the script.
